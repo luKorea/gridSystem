@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        article {
+            width: 300px;
+            height: 300px;
+            border: 3px solid #eee;
+            box-sizing: border-box;
+            /* 定义容器 */
+            display: grid;
+            /* 多种方式定义单格 */
+            /* 按百分比划分 */
+            grid-template-rows: 50% 50%;
+            grid-template-columns: 20% 20% 20% 20% 20%;
+            /* 按比例划分 */
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            /* 自动填充： width: 300px; height: 300pxpx; 3r3c */
+            grid-template-rows: repeat(auto-fill, 100px);
+            grid-template-columns: repeat(auto-fill, 100px);
+            /* minmax 控制行范围的波动 */
+            grid-template-rows: repeat(2, minmax(50px, 100px));
+            grid-template-columns: repeat(3, 1fr);
+            /* 栅格间距 */
+            row-gap: 10px;
+            column-gap: 10px;
+            gap: 10px 10px;
+        }
+        
+        div {
+            background-color: #008c8c;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+    </article>
+</body>
+
+</html>
